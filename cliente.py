@@ -12,4 +12,4 @@ class Cliente:
             raise ValueError('Cpf inválido. O cpf deve conter 11 dígitos.')
 
 c = Cliente()
-print(c.mostrar_cpf())
+print(c.valida_cpf())
