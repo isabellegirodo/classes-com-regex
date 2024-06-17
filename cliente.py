@@ -1,7 +1,7 @@
 import re
 
 class Cliente:
-    def mostrar_cpf(self):
+    def valida_cpf(self):
         cpf = str(input('Digite seu cpf: '))
         padrao = r'\d{11}'
         verifica_cpf = re.fullmatch(padrao, cpf)
