@@ -27,8 +27,19 @@ class ValidaNumerosCliente:
                 print(f'Telefone formatado: {telefone[:4]}-{telefone[4:]}')
         else:
             raise ValueError('Telefone inválido. O telefone deve conter 8 ou 9 dígitos.')
+        
+    def cep_formatado(self):
+        cep = str(input('Digite seu cep: '))
+        padrao = r'^\d{8}$'
+        valida_cep = re.fullmatch(padrao, cep)
+        
+        if valida_cep:
+            return f'Cep formatado: {cep[:5]}-{cep[5:]}'
+        else:
+            raise ValueError('Cep inválido. O cep precisa conter 8 dígitos')
 
 c = ValidaNumerosCliente()
 
 print(c.valida_cpf())
 c.telefone_formatado()
+print(c.cep_formatado())
