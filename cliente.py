@@ -19,7 +19,7 @@ class ValidaNumerosCliente:
         
         telefone = str(input('Digite seu número de telefone): '))
         
-        padrao = r'^(?:9[1-9]\d{7})|(?:[1-8]\d{7})$'
+        padrao = r'^9?[1-9]\d{7}$'
         verifica_telefone = re.fullmatch(padrao, telefone)
         
         if verifica_telefone:
