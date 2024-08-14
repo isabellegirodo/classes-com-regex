@@ -43,9 +43,3 @@ class ValidaNumerosCliente:
             return f'Cep formatado: {cep[:5]}-{cep[5:]}'
         else:
             raise ValueError('Cep inválido. O cep precisa conter 8 dígitos')
-
-c = ValidaNumerosCliente()
-
-print(c.cpf_formatado())
-c.telefone_formatado()
-print(c.cep_formatado())
